@@ -10,5 +10,3 @@ CREATE TABLE notes (
 );
 
 INSERT INTO notes (title, text) VALUES ("First Note", "Welcome to the note taking app!");
-INSERT INTO notes (title, text) VALUES ("Tasks for Today", "Do the MVC Note Taker Assignment");
-INSERT INTO notes (title, text) VALUES ("Stuff", "Random note");
