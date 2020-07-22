@@ -1,17 +1,24 @@
 const mysql = require('mysql');
 const util = require('util');
 
-var connection;
+require('dotenv').config();
+let host = process.env.DB_HOST
+let port = process.env.DB_PORT
+let user = process.env.DB_USER
+let password = process.env.DB_PASS
+let database = process.env.DB_NAME
+
+let connection;
 
 if(process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }else {
  connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: "",
-    database: 'notes_db'
+    host: host,
+    port: port,
+    user: user,
+    password: password,
+    database: database
   });
 };
 
